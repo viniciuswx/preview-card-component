@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    -ff-lexend: 'Lexend Deca', sans-serif;
+    -ff-big: 'Big Shoulders Display', cursive;
+
+    -color-orange: hsl(31, 77%, 52%);
+    -color-dark-cyan: hsl(184, 100%, 22%);
+    -color-very-dark: hsl(179, 100%, 13%);
+
+    -color-transparent: hsla(0, 0%, 100%, 0.75);
+    -color-light: hsl(0, 0%, 95%);
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: cyan;
+    padding: 2.5rem;
+    max-width: 300px;
+}
+
+.button {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    padding: .75rem 2rem;
+    border-radius: 100px;
+    font-family: 'Lexend Deca', sans-serif;
+    border: 2px solid transparent;
+    transition: all .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 14px;
+}
+
+.card-sedans {
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+    border-radius: 10px 10px 0 0;
+}
+
+.card-sedans .button {
+    color: hsl(31, 77%, 52%);
+}
+
+.card-suvs {
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+}
+
+.card-suvs .button {
+    color: hsl(184, 100%, 22%);
+}
+
+.card-luxury {
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+    border-radius: 0 0 10px 10px;
+}
+
+.card-luxury .button {
+    color: hsl(179, 100%, 13%);
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 2px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px){
+    body {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-wrapper {
+        flex-direction: row;
+    }
+
+    .card-sedans {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card-luxury {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .button {
+        margin-top: 4rem;
+    }
+}
